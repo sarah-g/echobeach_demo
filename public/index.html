@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    </head>
+    <body>
+    
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Echo Beach <small>bat classifier</small></h1>
+                <h3 id='updates'>Ready...</h3>
+                
+            </div>
+        </div>
+        
+        <div id="listen_container" class="container centered" style="position: absolute; width: 300px; height: 200px; top: 50%; left: 50%; margin: -100px 0 0 -150px;">
+            <img class="img-responsive" src="../images/sound.gif" alt="Echo Beach">
+        </div>
+        
+        <div id="generate_container" class="container centered" style="position: absolute; width: 300px; height: 200px; top: 50%; left: 50%; margin: -100px 0 0 -150px;">
+            <img class="img-responsive" src="../images/cogs.gif" alt="Echo Beach">
+        </div>
+        
+        <div class="container">
+            <div id="canvas_container" class="col-xs-10">
+                <img id='spec_img' class='img-responsive' style='width: 100%; height: auto;'>
+                <!--canvas id="canvas" class='img-responsive' style="width: 100%; height: auto;"></canvas-->
+            </div>
+        
+            <div id="button_container" class="col-xs-2">
+                <button id="clear" type="button" class="btn btn-info">Clear</button>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Javascript scripts -->
+        <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+        <!--script src="./js/jquery-3.0.0.min.js"></script-->
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script-->
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        
+    </body>
+</html>
