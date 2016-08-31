@@ -20,12 +20,15 @@ button.dir(mraa.DIR_IN); //set the gpio direction to input
 button.isr(mraa.EDGE_RISING, pressed);
 var pressed = false;
 
-mainLoop();
+//mainLoop();
 console.log("Bat recorder ready...");
+setInterval(function(){var pin=button.getPin()}, 10000);
 
 function pressed(){
-	
-	if(!pressed){
+
+    console.log("button pressed!");
+    
+    if(!pressed){
 		pressed = true;
 
     console.log("recording started...");
@@ -140,11 +143,11 @@ function runPythonScript(filename)
     });
 }
 
-function mainLoop()
+/*function mainLoop()
 {
     //main loop running to keep program alive   
     setTimeout(mainLoop,1000); //call the indicated function after 1 second (1000 milliseconds)
-}
+}*/
     
 
 /*exports.start = function() //
